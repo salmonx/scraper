@@ -45,7 +45,6 @@ class PhicommSpider(Spider):
     def parse_product(self, response):
         import re
         #/cn/Uploads/files/20161024/K1_V22.4.2.15.bin
-        print response.text
         path = re.findall(u"(/cn/Uploads/files/.*?\.bin)", response.text)[0]
         url = "http://www.phicomm.com/{}".format(path)
 
